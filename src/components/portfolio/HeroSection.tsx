@@ -1,3 +1,5 @@
+import { Linkedin } from "lucide-react";
+
 const HeroSection = () => {
   return (
     <section className="min-h-[80vh] flex items-center justify-center py-20">
@@ -32,6 +34,15 @@ const HeroSection = () => {
             className="px-8 py-3 rounded-full border-2 border-border hover:border-primary font-medium transition-all hover:scale-105"
           >
             Contact
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/mingi-choi-890163224/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110"
+            aria-label="LinkedIn Profile"
+          >
+            <Linkedin className="w-5 h-5" />
           </a>
         </div>
       </div>
