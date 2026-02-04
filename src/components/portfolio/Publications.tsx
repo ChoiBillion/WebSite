@@ -1,4 +1,4 @@
-import { FileText, Star } from "lucide-react";
+import { ExternalLink, Star } from "lucide-react";
 
 const Publications = () => {
   const publications = [
@@ -9,7 +9,8 @@ const Publications = () => {
       journal: "Friction",
       details: "13(10), 9441092 (2025)",
       highlight: "Selected as a Back Cover",
-      isFirst: true
+      isFirst: true,
+      link: "https://www.sciopen.com/article/10.26599/FRICT.2025.9441092"
     },
     {
       number: 5,
@@ -17,7 +18,8 @@ const Publications = () => {
       title: "Unveiling the deposition mechanism of ultra-thin graphene oxide flakes in an aqueous colloidal phase",
       journal: "Applied Surface Science",
       details: "164307 (2025)",
-      isFirst: false
+      isFirst: false,
+      link: "https://www.sciencedirect.com/science/article/pii/S0169433225020239"
     },
     {
       number: 4,
@@ -25,7 +27,8 @@ const Publications = () => {
       title: "Unveiling the Mechanism of Surface Corrugation Formation on a Quasi Free-Standing Bi-Layer Graphene via Experimental and Modeling Investigations",
       journal: "Applied Surface Science",
       details: "158749 (2023)",
-      isFirst: false
+      isFirst: false,
+      link: "https://www.sciencedirect.com/science/article/pii/S0169433223024297"
     },
     {
       number: 3,
@@ -33,7 +36,8 @@ const Publications = () => {
       title: "Simply Controlling the Surface Structure of Graphene Oxide Thin Films Using Multiple Drop-Casting",
       journal: "Diamond and Related Materials",
       details: "139, 110327 (2023)",
-      isFirst: false
+      isFirst: false,
+      link: "https://www.sciencedirect.com/science/article/pii/S0925963523006520"
     },
     {
       number: 2,
@@ -41,7 +45,8 @@ const Publications = () => {
       title: "Correlating Surface Structures and Nanoscale Friction of CVD Multi-Layer Graphene",
       journal: "Applied Surface Science",
       details: "584, 152572 (2022)",
-      isFirst: true
+      isFirst: true,
+      link: "https://www.sciencedirect.com/science/article/pii/S0169433222001568"
     },
     {
       number: 1,
@@ -49,7 +54,8 @@ const Publications = () => {
       title: "Nanoscale Friction of CVD Single-Layer MoS2 with Controlled Defect Formation",
       journal: "Surfaces and Interfaces",
       details: "26, 101437 (2021)",
-      isFirst: true
+      isFirst: true,
+      link: "https://www.sciencedirect.com/science/article/pii/S0169433221018073"
     }
   ];
 
@@ -93,10 +99,21 @@ const Publications = () => {
                       })}
                     </span>
                   </p>
-                  <p className="text-sm">
-                    <span className="font-medium italic">{pub.journal}</span>
-                    <span className="text-muted-foreground">, {pub.details}</span>
-                  </p>
+                  <div className="flex items-center justify-between gap-4 flex-wrap">
+                    <p className="text-sm">
+                      <span className="font-medium italic">{pub.journal}</span>
+                      <span className="text-muted-foreground">, {pub.details}</span>
+                    </p>
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-all hover:scale-105 shadow-sm"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      View Paper
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
